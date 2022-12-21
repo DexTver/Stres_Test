@@ -4,8 +4,14 @@ import os, sys
 # python test.py good bad gen 100
 
 # test.py, good, bad, gen, iters
-_, good, bad, gen, iters = sys.argv
+# _, good, bad, gen, iters = sys.argv
 # _, good, bad, gen, check, iters = sys.argv
+
+gen = "gen"
+good = "good"
+bad = "bad"
+iters = 100
+
 
 
 for i in range(1, int(iters) + 1):

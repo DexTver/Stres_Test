@@ -9,17 +9,19 @@ int main() {
     cin.tie(nullptr);
     cout.tie(nullptr);
     mt19937 rnd(chrono::high_resolution_clock::now().time_since_epoch().count());
-    ll a = 0, b = 1, c, x, y, r = 0;
-    a = rnd() % (ll) 1e4;
-    while (a == 0 && b == 0) {
-        b = rnd() % (ll) 1e4;
+//    a = rnd() % (ll) 1e4;
+    int n = 10, m = 30;
+    vector<int> a = {0, 1, 5, 0, 3, 67, 0, 2, 4, 0};
+    cout << n << "\n";
+    for (int i : a) {
+        cout << i << " ";
     }
-    c = rnd() % (ll) 1e4;
-    x = rnd() % (ll) 1e4;
-    y = rnd() % (ll) 1e4;
-    while (r == 0) {
-        r = rnd() % (ll) 1e4;
+    cout << "\n" << m << "\n";
+    for (int i = 0 ; i < m / 2 ; ++i) {
+        cout << "u" << " " << rnd() % n + 1 << " " << rnd() % 15 << "\n";
     }
-    cout << x << " " << y << " " << r << " " << a << " " << b << " " << c;
+    for (int i = 0 ; i < m / 2 ; ++i) {
+        cout << "s" << " " << rnd() % n + 1 << " " << rnd() % n + 1 << " " << rnd() % (n / 3 * 2) << "\n";
+    }
     return 0;
 }
